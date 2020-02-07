@@ -97,8 +97,9 @@ header {
 }
 /*ラベル*/
 .accbox label {
+    width: 10%;
     display: block;
-    margin: 0 42%;
+    margin: 0 auto;
     padding : 11px 12px;
     color :#A9A9A9;
     font-weight: bold;
@@ -233,7 +234,7 @@ header {
 .content2 li{
   list-style-type: none;
   float: left;
-  width: 24%;
+  width: 25%;
   margin: 10px 0;
 }
 .content2 ul,.content4 ul{
@@ -359,7 +360,7 @@ padding: 0.5em;
     text-decoration: none;
   }
   .menu1 a:hover{
-    color: black
+    color: black;
   }
   .menu2 a {
     color: black;
@@ -422,7 +423,7 @@ padding: 0.5em;
     text-decoration: none;
   }
   .menu1 a:hover{
-    color: black
+    color: black;
   }
   .menu2 a {
     color: black;
@@ -456,7 +457,7 @@ padding: 0.5em;
 .content4 li{
   width: 60%;
   margin: 20px auto;
-  float: initial
+  float: initial;
 }
 footer{
   width: 100%;
