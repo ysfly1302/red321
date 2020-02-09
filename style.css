@@ -33,7 +33,7 @@ header {
 /*ハンバーガーアイコンをCSSだけで表現*/
 #nav-open i{
   cursor: pointer;
-  font-size: 4vw;
+  font-size: 5vw;
   color: #FF6699;
 }
 #nav-open span:before {
@@ -71,7 +71,7 @@ header {
   transform: translateX(-105%);/*左に隠しておく*/
 }
 .hamburger-top i{
-  font-size: 4vw;
+  font-size: 5vw;
   color: #FF6699;
   cursor: pointer;
 }
@@ -100,7 +100,6 @@ header {
     width: 10%;
     display: block;
     margin: 0 auto;
-    padding : 11px 12px;
     color :#A9A9A9;
     font-weight: bold;
     cursor :pointer;
@@ -386,6 +385,7 @@ padding: 0.5em;
   }
   .content2 li,.content4 li{
     width: 50%;
+    margin: auto;
   }
   #more{
     margin: 0 42%;
@@ -400,7 +400,7 @@ padding: 0.5em;
   .icon a{
     color: grey;
     padding: 0 10px;
-    font-size: 3.5vw;
+    font-size: 4vw;
   }
 
 
@@ -450,6 +450,7 @@ padding: 0.5em;
 }
 .content2 li{
   width: 50%;
+  margin: auto;
 }
 #more {
   margin: 0 38%;
@@ -464,12 +465,15 @@ footer{
   margin: 50px 0;
 }
 .footer1 ul{
-  width: 70%;
+  width: 78%;
 }
 #no6{
   display: none;
 }
 .icon a{
   color: grey;
+}
+.accbox label{
+  width: 24%;
 }
 }
