@@ -90,7 +90,7 @@ header {
 }
 
 
-/*アコーディオンメニュー*/
+/*アコーディオン*/
 .accbox {
     padding: 0;
     max-width: 100%;/*最大幅*/
@@ -133,6 +133,7 @@ header {
   font-size: 1.5rem;
 }
 
+
 /*文字点滅*/
 .box{
   animation: flash 2s linear infinite;
@@ -147,11 +148,8 @@ header {
   }
 }
 
-/*スライダー*/
-.slider img{
-  width: 80%;
 
-}
+/*スライダー*/
 
 
 .sidemenu{
@@ -242,11 +240,6 @@ header {
 .content2 p,.content4 p{
   text-align: center;
   margin: 0 10%;
-}
-.content2 img,.content4 img::after{
-  content: "";
-  display: block;
-  clear: both;
 }
 #more{
   color: grey;
@@ -465,7 +458,7 @@ footer{
   margin: 50px 0;
 }
 .footer1 ul{
-  width: 78%;
+  width: 80%;
 }
 #no6{
   display: none;
