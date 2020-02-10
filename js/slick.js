@@ -2924,7 +2924,7 @@
 
         centerOffset = Math.floor(_.options.slidesToShow / 2);
 
-        if ( _.options.arrows === true &&
+        if ( _.options.arrows === false &&
             _.slideCount > _.options.slidesToShow &&
             !_.options.infinite ) {
 
@@ -2941,7 +2941,7 @@
                 _.$nextArrow.addClass('slick-disabled').attr('aria-disabled', 'true');
                 _.$prevArrow.removeClass('slick-disabled').attr('aria-disabled', 'false');
 
-            } else if (_.currentSlide >= _.slideCount - 1 && _.options.centerMode === true) {
+            } else if (_.currentSlide >= _.slideCount - 1 && _.options.centerMode === false) {
 
                 _.$nextArrow.addClass('slick-disabled').attr('aria-disabled', 'true');
                 _.$prevArrow.removeClass('slick-disabled').attr('aria-disabled', 'false');

@@ -5,7 +5,6 @@
 
 body{
   width: 100%;
-  background-color: white;
   font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック','YuGothic','Yu Gothic','メイリオ','Meiryo','ＭＳ Ｐゴシック','MS PGothic',sans-serif;
 }
 
@@ -13,7 +12,6 @@ body{
 /*ハンバーガーメニュー*/
 header {
   padding:3%;
-  background: white;
 }
 #nav-drawer {
   position: relative;
@@ -35,6 +33,7 @@ header {
   cursor: pointer;
   font-size: 5vw;
   color: #FF6699;
+  background-color: white;
 }
 #nav-open span:before {
   bottom: -8px;
@@ -65,7 +64,7 @@ header {
   width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
   max-width: 330px;/*最大幅（調整してください）*/
   height: 100%;
-  background: #fff;/*背景色*/
+  background: #fff; /*背景色*/
   transition: .3s ease-in-out;/*滑らかに表示*/
   -webkit-transform: translateX(-105%);
   transform: translateX(-105%);/*左に隠しておく*/
@@ -73,6 +72,7 @@ header {
 .hamburger-top i{
   font-size: 5vw;
   color: #FF6699;
+  background-color: white;
   cursor: pointer;
 }
 /*チェックが入ったらもろもろ表示*/
@@ -100,6 +100,7 @@ header {
     width: 10%;
     display: block;
     margin: 0 auto;
+    background-color: white;
     color :#A9A9A9;
     font-weight: bold;
     cursor :pointer;
@@ -108,7 +109,7 @@ header {
 }
 /*ラベルホバー時*/
 .accbox label:hover {
-    background :white;
+    background-color: white;
 }
 /*チェックは隠す*/
 .accbox input {
@@ -126,7 +127,7 @@ header {
 .cssacc:checked + .accshow {
     height: auto;
     padding: 5px;
-    background: white;
+    background-color: white;
     opacity: 1;
 }
 .fa-angle-double-down{
@@ -189,10 +190,6 @@ header {
 .mainmenu{
   width: 80%;
   margin-left: 20%;
-}
-#top{
-  width: 80%;
-  margin: 5% 10% 10% 10%;
 }
 .mainmenu h1{
   text-align: center;
@@ -305,12 +302,8 @@ footer{
 }
 .ft1{
 padding: 0.5em;
-  backgr ound: white;
+  background: white;
   box-shadow: 0 0 4px grey;
-}
-#top a{
-  color: grey;
-  text-decoration: none;
 }
 
 
@@ -395,6 +388,7 @@ padding: 0.5em;
     padding: 0 10px;
     font-size: 4vw;
   }
+}
 
 
 @media screen and (max-width: 559px){
@@ -405,6 +399,7 @@ padding: 0.5em;
     text-align: center;
   }
   .sidemenu1 h2{
+    background-color: white;
     color: #ff002347;
     margin: 30px 0;
   }
@@ -433,17 +428,11 @@ padding: 0.5em;
   line-height: 30px;
  }
  .info td,.info th{
-  text-align: initial;
-  vertical-align: top;
   padding: 5px;
 }
 .content3 img{
   width: 70%;
   margin: 10% 15%;
-}
-.content2 li{
-  width: 50%;
-  margin: auto;
 }
 #more {
   margin: 0 38%;
@@ -454,7 +443,6 @@ padding: 0.5em;
   float: initial;
 }
 footer{
-  width: 100%;
   margin: 50px 0;
 }
 .footer1 ul{
@@ -462,9 +450,6 @@ footer{
 }
 #no6{
   display: none;
-}
-.icon a{
-  color: grey;
 }
 .accbox label{
   width: 24%;
