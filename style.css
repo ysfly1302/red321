@@ -10,9 +10,6 @@ body{
 
 
 /*ハンバーガーメニュー*/
-header {
-  padding:3%;
-}
 #nav-drawer {
   position: relative;
 }
@@ -91,9 +88,10 @@ header {
 
 
 /*アコーディオン*/
+
 .accbox {
     padding: 0;
-    max-width: 100%;/*最大幅*/
+    max-width: 100%;
 }
 /*ラベル*/
 .accbox label {
@@ -138,59 +136,81 @@ header {
 }
 
 
-/*文字点滅*/
-.box{
-  animation: flash 2s linear infinite;
-  color: red;
+/* ヘッダー */
+header{
+    height: auto;
+    padding: 3% 5%;
+    position: relative;
 }
-@keyframes flash {
-  0%,100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
+#category{
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
 }
-
-
-.sidemenu{
-  position: fixed;
-  width: 20%;
-  text-align: center;
-  background-color: white;
+#category p{
+    font-size: max(1vw,18px);
+    border: solid 2px black;
+    padding: 5px 10px;
 }
-.sidemenu h2{
-  margin: 30px 0 10px 0;
-  color: #ff002347;
-  font-size: 2rem;
+#sh_logo{
+    width: 10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
 }
-.menu1 li{
-  margin: 10px 0;
-  text-decoration: none;
-  list-style-type: none;
+#top-icon{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
 }
-.menu2 ul{
-  margin: 30px 0;
-  line-height: 30px;
-  list-style-type: none;
+#top-icon i{
+    margin: 0 5px;
+    font-size: max(1.5vw,18px);
 }
-.sidemenu a{
-  text-decoration: none;
-  color: black;
-  font-size: 1.3rem;
+#top-icon i:hover{
+    color: gray;
 }
-.sidemenu a:hover{
-  color: grey;
+#form{
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
 }
-#logo{
-  width: 70%;
-  margin-top: 30px;
+/*フォーム全体*/
+#form1{
+    position: relative;/*フォームの相対位置*/	
+    max-width: 270px;/*フォームのサイズ*/
+    margin-bottom: 15px;/*フォームの下に余白*/	 	
 }
-
+/*検索ボックス*/
+#sbox1{
+    padding: 5px 10px;/*テキスト位置調整*/	 
+    border-radius: 2px 0 0 2px;/*検索ボックスの角を丸める*/		
+    background: #eee;/*検索ボックスの背景カラー*/		
+}
+/*検索ボタン*/
+#sbtn1{
+    background: #7fbfff;/*検索ボタンの背景カラー*/ 
+    border: none;/*検索ボタンの枠線を消す*/ 
+    color:  #fff;/*検索ボタンのテキストカラー*/ 
+    font-weight:  bold;/*検索ボタンのテキスト太字*/ 
+    padding: 5px 10px;
+}
+/*検索ボタンマウスオーバー時*/
+#sbtn1:hover{
+    color: #666;/*検索ボタンマウスオーバー時のフォントカラー*/ 
+}
 
 .mainmenu{
-  width: 80%;
-  margin-left: 20%;
+  width: 100%;
 }
 .mainmenu h1{
   text-align: center;
@@ -313,9 +333,6 @@ padding: 0.5em;
     display:none;
   }
   #logo1{
-    display: none;
-  }
-  header{
     display: none;
   }
   #no6{
