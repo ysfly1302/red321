@@ -7,6 +7,16 @@ body{
   width: 100%;
   font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック','YuGothic','Yu Gothic','メイリオ','Meiryo','ＭＳ Ｐゴシック','MS PGothic',sans-serif;
 }
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: gray;
+}
+ul{
+    list-style-type: none;
+}
 
 
 /*ハンバーガーメニュー*/
@@ -88,7 +98,6 @@ body{
 
 
 /*アコーディオン*/
-
 .accbox {
     padding: 0;
     max-width: 100%;
@@ -173,6 +182,7 @@ header{
 #top-icon i{
     margin: 0 5px;
     font-size: max(1.5vw,18px);
+    color: black;
 }
 #top-icon i:hover{
     color: gray;
@@ -209,40 +219,100 @@ header{
     color: #666;/*検索ボタンマウスオーバー時のフォントカラー*/ 
 }
 
-.mainmenu{
-  width: 100%;
+
+/* トップ */
+#banner1{
+    width: 100%;
+    height: auto;
 }
-.mainmenu h1{
-  text-align: center;
-  font-size: 2rem;
-  margin: 80px 0 20px 0;
-  color: #0e0e0e96;
-  font-family: 'Constantia','Baskerville',sans-serif;
+/* スライダー */
+.slider img{
+    width: 100%;
+    height: 34vw;
+    object-fit: cover;
 }
-.info td,.info th{
-  vertical-align: top;
-  padding: 10px;
-  text-align: initial;
+
+
+/* メイン */
+main{
+    text-align: center;
 }
-.info tr{
-  line-height: initial;
+.headtxt{
+    margin: 100px 0 50px 0;
 }
-.info{
-  width: 60%;
-  margin: auto;
+.headtxt h1{
+    font-size: max(2.4vw,24px);
+    font-family: ;
+
 }
-.content1 h1{
-  color: #544e4e;
+.headtxt p{
+    font-size: max(1vw,18px);
 }
-.content2 img,.content4 img{
-  width: 80%;
-  margin: 0 10%;
+
+/* お知らせ */
+#info{
+    max-width: 700px;
+    margin: auto;
+    border: solid 1px black;
+    padding: 30px 100px 40px 100px;
 }
-.content2 a:hover img,.content4 a:hover img{
-  filter: alpha(opacity=70);
-  -moz-opacity: 0.7;
-  opacity: 0.7;
+#info dl{
+    display: flex;
+    align-items: flex-start;
+    padding: 30px 0 10px 0;
+    line-height: 1.5;
+    border-bottom: 1px dashed black;
+    font-size: max(1vw,18px);
 }
+#info dd{
+    margin: 0 50px;
+}
+#info i{
+    font-size: max(1vw,16px);
+    margin: 5px 0 0 10px;
+}
+#info-more{
+    font-size: max(1vw,18px);
+    font-weight: bold;
+    display: flex;
+    margin: 30px 0 0 500px;
+}
+#info-more a{
+    margin: 0 auto;
+}
+
+/* NEW ARRIVAL */
+#item-list1{
+    width: 80%;
+    margin: 0 10%;
+}
+#item-list1 img{
+    width: 100%;
+    object-fit: cover;
+}
+#item-list1 a:hover img{
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    opacity: 0.7;
+}
+#item-list1 li{
+    display: inline-block;
+    width: 20%;
+    margin: 0 10px 50px 10px;
+    text-align: left;
+}
+#item-list1 div{
+
+}
+#item-list1 h2{
+    font-size: max(1vw,18px);
+    margin: 10px 0;
+}
+#item-list1 p{
+    font-size: max(1vw,18px);
+    font-weight: 100;
+}
+
 .content2 h1{
   color: #ff8312d6;
 }
