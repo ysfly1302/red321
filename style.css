@@ -208,7 +208,7 @@ header{
 }
 /*検索ボタン*/
 #sbtn1{
-    background: #7fbfff;/*検索ボタンの背景カラー*/ 
+    background: #D8BfD8;/*検索ボタンの背景カラー*/ 
     border: none;/*検索ボタンの枠線を消す*/ 
     color:  #fff;/*検索ボタンのテキストカラー*/ 
     font-weight:  bold;/*検索ボタンのテキスト太字*/ 
@@ -237,16 +237,34 @@ header{
 main{
     text-align: center;
 }
+/* 大見出し */
 .headtxt{
     margin: 100px 0 50px 0;
 }
 .headtxt h1{
-    font-size: max(2.4vw,24px);
-    font-family: ;
-
+    font-size: max(2vw,24px);
+    font-family: Garamond , "Times New Roman" , "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif;;
 }
 .headtxt p{
     font-size: max(1vw,18px);
+}
+/* アイテムもっと見る */
+.item-more{
+    padding: 10px;
+    background-color: #fff;
+    font-size: max(1vw,18px);
+    font-weight: bold;
+    width: 20%;
+    margin: auto;
+    border: solid 2px #000;
+}
+.item-more:hover{
+    color: white;
+    background-color: #D8BfD8;
+    border: solid 2px #D8BfD8;
+}
+.item-more a:hover{
+    color: initial;
 }
 
 /* お知らせ */
@@ -282,90 +300,55 @@ main{
 }
 
 /* NEW ARRIVAL */
-#item-list1{
+.item-list{
     width: 80%;
     margin: 0 10%;
 }
-#item-list1 img{
+.item-list img{
     width: 100%;
     object-fit: cover;
 }
-#item-list1 a:hover img{
+.item-list a:hover img{
     filter: alpha(opacity=70);
     -moz-opacity: 0.7;
     opacity: 0.7;
 }
-#item-list1 li{
+.item-list li{
     display: inline-block;
     width: 20%;
     margin: 0 10px 50px 10px;
     text-align: left;
 }
-#item-list1 div{
-
-}
-#item-list1 h2{
-    font-size: max(1vw,18px);
+.item-list h2{
+    font-size: max(1.2vw,18px);
     margin: 10px 0;
 }
-#item-list1 p{
+.item-list p{
     font-size: max(1vw,18px);
     font-weight: 100;
 }
 
-.content2 h1{
-  color: #ff8312d6;
+/* RANKING */
+.r-box{
+    position: relative;
 }
-.content2 li{
-  list-style-type: none;
-  float: left;
-  width: 25%;
-  margin: 10px 0;
-}
-.content2 ul,.content4 ul{
-  margin: 0 auto;
-}
-.content2 p,.content4 p{
-  text-align: center;
-  margin: 0 10%;
-}
-#more{
-  color: grey;
-  border: solid 2px grey;
-  padding: 10px;
-  border-radius: 10px;
-  text-decoration: none;
-  letter-spacing: 5px;
-  display: inline-block;
-  margin: 0 44%;
-}
-#more a:hover{
-  color: black;
+.ranking_no{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    background-color: #fff;
+    border: solid 0.5px;
+    font-size: 15px !important;
+    font-weight: bold !important;
 }
 
-.content3 img{
-  width: 60%;
-  margin: 20% 20% 10% 20%;
+/* PICK UP */
+#pick-list li{
+    width: 40%;
 }
 
-
-.content4 h1{
-  color: #f64727c4;
-}
-.content4 li{
-  list-style-type: none;
-  float: left;
-  width: 20%;
-}
-.ranking{
-  font-family:'Arial Rounded MT Bold',sans-serif;
-  position: relative;
-  top: 24px;
-  z-index: 2;
-  background-color: #db151b;
-  color: white;
-  width: 40px;
-}
 
 footer{
   width: 80%;
