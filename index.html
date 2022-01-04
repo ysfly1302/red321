@@ -31,67 +31,35 @@
     <title> shelly online shop</title>
   </head>
   <body>
-    <header> 
-      <!-- ハンバーガーメニュー -->
-      <div id="nav-drawer">
-      <input id="nav-input" type="checkbox" class="nav-unshown">
-      <label id="nav-open" for="nav-input"><i class="fas fa-bars"></i></label>
-      <section class="icon">
-      <a href="#"><i class="fas fa-unlock-alt"></i></a>
-      <a href="#"><i class="fas fa-shopping-cart"></i></a>
-      </section>
-      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
-      <div id="nav-content"><div class="hamburger-top"><label for="nav-input"><i class="fas fa-times"></i></label></div>
-        <section class="sidemenu1">
-          <section class="side_content">
-          <h2>MENU</h2>
-          <nav>
-            <ul class="menu1">
-              <li><a href="">TOP</a></li>
-              <li><a href="">INFOMATION</a></li>
-              <li><a href="">CONTACT</a></li>
-            </ul>
-          </nav>
-          <h2>CATEGORY</h2>
-          <nav>
-            <ul class="menu1">
-              <li><a href="">NEW</a></li>
-              <li><a href="">TOPS</a></li>
-              <li><a href="">BOTTOM</a></li>
-              <li><a href="">OUTER</a></li>
-              <li><a href="">DRESS</a></li>
-              <li><a href="">BAG</a></li>
-              <li><a href="">SHOES</a></li>
-            </ul>
-          </nav>
-          <section class="menu2">
-            <ul>
-            <li><a href="#"><i class="fas fa-unlock-alt">ログイン</i></a></li>
-            <li><a href="#"><i class="fas fa-shopping-cart">カート</i></a></li>
-          </ul>
-          </section>
-         </section>
-        </section>
-        </div>
+    <!-- ヘッダー -->
+    <header class="header">
+      <div id="form">
+        <form id="form1" action="自分のサイトURL" method="get">
+        <input id="sbox1" id="s" name="s" type="text" placeholder="キーワードを入力" />
+        <input id="sbtn1" type="submit" value="検索" /></form>
       </div>
-      <!-- ヘッダー部分 -->
-        <div id="form">
-          <form id="form1" action="自分のサイトURL" method="get">
-          <input id="sbox1" id="s" name="s" type="text" placeholder="キーワードを入力" />
-          <input id="sbtn1" type="submit" value="検索" /></form>
-        </div>
-        <div id="category">
-          <p>カテゴリ</p>
-        </div>
-        <img src="coco.img/1x/shellylogo.png" id="sh_logo" alt="ブランドロゴ">
-        <div id="top-icon">
-          <a href="#"><i class="fas fa-shopping-cart"></i></a>
-          <a href="#"><i class="far fa-heart"></i></a>
-          <a href="#"><i class="fas fa-user-circle"></i></a>
-        </div>
-      </header>
+      <img src="coco.img/1x/shellylogo.png" id="sh_logo" alt="ブランドロゴ">
+      <div id="top-icon">
+        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        <a href="#"><i class="far fa-heart"></i></a>
+        <a href="#"><i class="fas fa-user-circle"></i></a>
+      </div>
+    </header>
       <!-- トップ -->
       <main>
+        <div class="scroll-head">
+          <nav>
+            <ul>
+              <li><img id="scroll-img" src="coco.img/1x/shellylogo1.png" alt="ブランドロゴ"></li>
+              <li>新作アイテム</li>
+              <li>人気アイテム</li>
+              <li>カテゴリ</li>
+              <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+              <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+              <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+          </nav>
+        </div>
         <section>
           <a href="#"><img src="coco.img/banner1.png" id="banner1" alt="会員登録バナー"></a>
           <div class="slider">
@@ -384,11 +352,11 @@
         </nav>
         <nav id="nav-area2">
           <ul>
-            <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
             <li><a href="#"><i class="fab fa-line"></i></a></li>
-            <li><a href="" class="ft1">会員登録</a></li>
-            <li><a href="" class="ft1">メルマガ</a></li>
+            <li><a href="#" class="ft1">会員登録</a></li>
+            <li><a href="#" class="ft1">メルマガ</a></li>
           </ul>
         </nav>
         <nav id="nav-area3">
@@ -428,6 +396,25 @@
           return false;
         });
         });
+
+        //スクロールヘッダー
+        var headNav = $(".scroll-head");
+          /* 初期表示、スクロール時にイベント開始 */
+          $(window).on("load scroll", function () {
+          /* スクロール位置の高さが200pxより大きい、かつis-fixedクラスがない場合 */
+          if ($(this).scrollTop() > 200 && headNav.hasClass("is-fixed") == false) {
+            headNav.css("display", "block");
+            headNav.css({ "top": "-100px" }); /* ヘッダーの高さ分マイナスにする */
+            headNav.addClass("is-fixed");
+            headNav.animate({ "top": 0 }, 500);
+          }
+          /* スクロール位置の高さが200pxより小さい、かつis-fixedクラスがある場合 */
+          else if ($(this).scrollTop() < 200 && headNav.hasClass("is-fixed") == true) {
+            headNav.removeClass("is-fixed");
+            headNav.css("display", "none");
+          }
+        });
+        
         //お気に入りボタン
         $(function(){
 	        $('.fa-heart').click(function(){

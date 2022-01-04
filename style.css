@@ -19,7 +19,8 @@ ul{
 }
 
 
-/*ハンバーガーメニュー*/
+/*--------------------ハンバーガーメニュー-----------------------
+--------------------------------------------------------------*/
 #nav-drawer {
   position: relative;
 }
@@ -97,72 +98,12 @@ ul{
 }
 
 
-/*アコーディオン*/
-.accbox {
-    padding: 0;
-    max-width: 100%;
-}
-/*ラベル*/
-.accbox label {
-    width: 10%;
-    display: block;
-    margin: 0 auto;
-    background-color: white;
-    font-weight: bold;
-    cursor :pointer;
-    transition: all 0.5s;
-    font-family: 'Verdana',sans-serif;
-}
-/*ラベルホバー時*/
-.accbox label:hover {
-    background-color: white;
-}
-/*チェックは隠す*/
-.accbox input {
-    display: none;
-}
-/*中身を非表示にしておく*/
-.accbox .accshow {
-    height: 0;
-    padding: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: 0.8s;
-}
-/*クリックで中身表示*/
-.cssacc:checked + .accshow {
-    height: auto;
-    padding: 5px;
-    background-color: white;
-    opacity: 1;
-}
-.fa-angle-double-down{
-  font-size: 1.5rem;
-  background-color: #ff8312c4;
-  color: white;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-
-/* ヘッダー */
+/*---------------------------ヘッダー----------------------------
+--------------------------------------------------------------*/
 header{
     height: auto;
     padding: 3% 5%;
     position: relative;
-}
-#category{
-    float: left;
-    position: absolute;
-    top: 50%;
-    left: 12%;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit-transform: translateY(-50%) translateX(-50%);
-}
-#category p{
-    font-size: max(1vw,18px);
-    border: solid 2px black;
-    padding: 5px 10px;
 }
 #sh_logo{
     width: 10%;
@@ -187,6 +128,9 @@ header{
 #top-icon i:hover{
     color: gray;
 }
+
+/*------------------------検索フォーム--------------------------
+--------------------------------------------------------------*/
 #form{
     position: absolute;
     top: 60%;
@@ -208,7 +152,7 @@ header{
 }
 /*検索ボタン*/
 #sbtn1{
-    background: #D2B48C;/*検索ボタンの背景カラー*/ 
+    background: #FF6699;/*検索ボタンの背景カラー*/ 
     border: none;/*検索ボタンの枠線を消す*/ 
     color:  #fff;/*検索ボタンのテキストカラー*/ 
     font-weight:  bold;/*検索ボタンのテキスト太字*/ 
@@ -220,7 +164,33 @@ header{
 }
 
 
-/* トップ */
+/*---------------------スクロールヘッダー------------------------
+--------------------------------------------------------------*/
+.scroll-head {
+    background: #fff;
+    padding: 10px 0;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    display: none;
+    box-shadow: lightgray 1px 1px 5px;
+}
+.scroll-head ul{
+    margin: 0 100px;
+    text-align: left;
+}
+.scroll-head li{
+    display: inline-block;
+    margin: 0 10px;
+}
+.scroll-head img{
+    width: 30%;
+}
+
+
+/*--------------------------トップ-----------------------------
+--------------------------------------------------------------*/
 #banner1{
     width: 100%;
     height: auto;
@@ -255,13 +225,14 @@ header{
 }
 
 
-/* メイン */
+/*------------------------メイン(共通)---------------------------
+--------------------------------------------------------------*/
 main{
     text-align: center;
 }
 /* 大見出し */
 .headtxt{
-    margin: 100px 0;
+    margin: 150px 0 50px 0;
 }
 .headtxt h1{
     font-size: max(2vw,24px);
@@ -294,7 +265,9 @@ main{
     margin-top: 10px;
 }
 
-/* お知らせ */
+
+/*--------------------------お知らせ----------------------------
+--------------------------------------------------------------*/
 #info{
     max-width: 700px;
     margin: auto;
@@ -326,7 +299,9 @@ main{
     margin: 0 auto;
 }
 
-/* NEW ARRIVAL */
+
+/*------------------------新作アイテム---------------------------
+--------------------------------------------------------------*/
 .item-list{
     width: 80%;
     margin: 0 10%;
@@ -355,7 +330,9 @@ main{
     font-weight: 100;
 }
 
-/* RANKING */
+
+/*---------------------------RANKING-----------------------------
+--------------------------------------------------------------*/
 .r-box{
     position: relative;
 }
@@ -371,12 +348,16 @@ main{
     font-weight: bold !important;
 }
 
-/* PICK UP */
+
+/*------------------------ピックアップ---------------------------
+--------------------------------------------------------------*/
 #pick-list li{
     width: 40%;
 }
 
-/* Instagram */
+
+/*-------------------------instagram----------------------------
+--------------------------------------------------------------*/
 .insta{
     background-image: url("coco.img/insta-back.jpg");
     width: 100%;
@@ -385,7 +366,7 @@ main{
     margin-top: 100px;
 }
 .insta h1{
-    margin: 50px 0 30px 0;
+    margin: 70px 0 30px 0;
     font-size: max(2vw,24px);
     font-family: Garamond , "Times New Roman" , "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif;;
 }
@@ -394,7 +375,7 @@ main{
     font-size: max(1vw,18px);
 }
 #insta-list{
-    width: 90%;
+    width: 70%;
     margin: auto;
 }
 #insta-list img{
@@ -407,12 +388,14 @@ main{
     opacity: 0.7;
 }
 
-/* フッターエリア */
+
+/*-----------------------フッターエリア-------------------------
+--------------------------------------------------------------*/
 footer{
     width: 100%;
     height: auto;
     background-color: #f0cece;
-    padding: 100px 0 10px 0;
+    padding: 40px 0 10px 0;
 }
 #nav-area1{
     width: 40%;
@@ -421,16 +404,28 @@ footer{
     vertical-align: top;
 }
 #nav-area1 img{
-    width: 50%;
+    width: 40%;
 }
 #nav-area2,#nav-area3{
     width: 20%;
     display: inline-block;
 }
+#nav-area2 i{
+    margin-bottom: 20px;
+}
 .footer1{
     width: 100%;
     text-align: center;
     margin-top: 60px;
+}
+.fa-twitter,.fa-instagram{
+    float: left;
+    font-size: 30px;
+    margin-right: 20px;
+}
+.fa-line{
+    clear: both;
+    font-size: 30px;
 }
 
 
