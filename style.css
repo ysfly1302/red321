@@ -176,16 +176,27 @@ header{
     display: none;
     box-shadow: lightgray 1px 1px 5px;
 }
+.scroll-head nav{
+    margin: 0 20%;
+}
 .scroll-head ul{
-    margin: 0 100px;
-    text-align: left;
+    float: right;
 }
 .scroll-head li{
     display: inline-block;
     margin: 0 10px;
+    font-size: max(1vw,18px);
 }
 .scroll-head img{
-    width: 30%;
+    width: 10%;
+    float: left;
+}
+.scroll-head i{
+    font-size: max(1vw,18px);
+    color: black;
+}
+.scroll-head i:hover{
+    color: gray;
 }
 
 
