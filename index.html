@@ -18,6 +18,7 @@
     <link rel="shortcut icon" href="https://ysfly1302.github.io/shellysite/coco.img/favicon.png">
     <!-- fontawesomeリンク -->
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- cssリンク -->
     <link rel="stylesheet" href="style.css">
     <!-- slickリンク -->
@@ -33,17 +34,33 @@
   <body>
     <!-- ヘッダー -->
     <header class="header">
-      <div id="form">
-        <form id="form1" action="自分のサイトURL" method="get">
-        <input id="sbox1" id="s" name="s" type="text" placeholder="キーワードを入力" />
-        <input id="sbtn1" type="submit" value="検索" /></form>
+      <div id="h-banner">
+        <a href="#">新規会員登録で10%OFFクーポン配布中!</a>
       </div>
-      <img src="coco.img/1x/shellylogo.png" id="sh_logo" alt="ブランドロゴ">
-      <div id="top-icon">
-        <a href="#"><i class="fas fa-search"></i></a>
-        <a href="#"><i class="fas fa-shopping-cart"></i></a>
-        <a href="#"><i class="far fa-heart"></i></a>
-        <a href="#"><i class="fas fa-user-circle"></i></a>
+      <div id="h-nav">
+        <i class="fas fa-bars"></i>
+        <a href="#"><img src="coco.img/1x/shellylogo.png" id="sh_logo" alt="ブランドロゴ"></a>
+        <nav>
+          <div id="nav-text">
+            <ul>
+              <li><a href="#">新作アイテム</a></li>
+              <li><a href="#">人気アイテム</a></li>
+              <li><a href="#">特集・シリーズ</a></li>
+              <li><a href="#">カテゴリ</a></li>
+            </ul>
+          </div>
+          <form method="get" action="#" class="search_container">
+            <input type="text" size="25" placeholder="キーワード検索">
+            <input type="submit" value="&#xf002">
+          </form>
+          <div id="nav-icon">
+            <ul>
+              <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+              <li><a href="#"><i class="far fa-heart"></i></a></li>
+              <li><a href="#"><i class="fas fa-user-circle"></i></a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
       <!-- トップ -->
@@ -56,6 +73,7 @@
               <li><a href="#">人気アイテム</a></li>
               <li><a href="#">特集・シリーズ</a></li>
               <li><a href="#">カテゴリ</a></li>
+              <li><a href="#"><i class="fas fa-search"></i></a></li>
               <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
               <li><a href="#"><i class="fas fa-heart"></i></a></li>
               <li><a href="#"><i class="fas fa-user-circle"></i></a></li>
@@ -63,7 +81,6 @@
           </nav>
         </div>
         <section>
-          <a href="#"><img src="coco.img/banner1.png" id="banner1" alt="会員登録バナー"></a>
           <div class="slider">
 		        <img src="coco.img/slide1.jpg" alt="スライド画像1" class="top">
             <img src="coco.img/slide2.jpg" alt="スライド画像2" class="top">

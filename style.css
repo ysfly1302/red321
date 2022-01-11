@@ -101,69 +101,74 @@ ul{
 /*---------------------------ヘッダー----------------------------
 --------------------------------------------------------------*/
 header{
-    height: auto;
-    padding: 3% 5%;
-    position: relative;
+    width: 100%;
+}
+#h-banner{
+    width: 100%;
+    padding: 5px auto;
+    text-align: center;
+    background-color: #FF6699;
+}
+#h-banner a{
+    font-size: ;
+    color: #fff;
+    letter-spacing: 1px;
 }
 #sh_logo{
-    width: 10%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit-transform: translateY(-50%) translateX(-50%);
+    width: 12%;
+    margin: 10px 0;
 }
-#top-icon{
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit-transform: translateY(-50%) translateX(-50%);
+#h-nav{
+    margin: 0 5%;
 }
-#top-icon i{
-    margin: 0 5px;
-    font-size: max(1.5vw,18px);
-    color: black;
+header nav{
+    padding-top: 40px;
+    display: flex;
+    float: right;
 }
-#top-icon i:hover{
-    color: gray;
+#nav-icon{
+    margin: 5px 0 0 20px;
 }
-.fa-search{
+header li{
+    float: left;
+    margin: 0 14px;
+    font-size: max(1vw,18px);
+}
+.fa-bars{
     display: none;
 }
 
 /*------------------------検索フォーム--------------------------
 --------------------------------------------------------------*/
-#form{
+.search_container {
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #999;
+    padding: 3px 10px;
+    border-radius: 20px;
+    width: 200px;
+    overflow: hidden;
+    margin-left: 20px;
+}
+.search_container input[type="text"]  {
+    border: none;
+}
+.search_container input[type="text"]:focus {
+    outline: 0;
+}
+.search_container input[type="submit"]  {
+    cursor: pointer;
+    font-family: FontAwesome;
+    font-size: 18px;
+    border: none;
+    background: none;
+    color: #000;
     position: absolute;
-    top: 60%;
-    right: 10%;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit-transform: translateY(-50%) translateX(-50%);
-}
-/*フォーム全体*/
-#form1{
-    position: relative;/*フォームの相対位置*/	
-    max-width: 270px;/*フォームのサイズ*/
-    margin-bottom: 15px;/*フォームの下に余白*/	 	
-}
-/*検索ボックス*/
-#sbox1{
-    padding: 5px 10px;/*テキスト位置調整*/	 
-    border-radius: 2px 0 0 2px;/*検索ボックスの角を丸める*/		
-    background: #eee;/*検索ボックスの背景カラー*/		
-}
-/*検索ボタン*/
-#sbtn1{
-    background: #FF6699;/*検索ボタンの背景カラー*/ 
-    border: none;/*検索ボタンの枠線を消す*/ 
-    color:  #fff;/*検索ボタンのテキストカラー*/ 
-    font-weight:  bold;/*検索ボタンのテキスト太字*/ 
-    padding: 5px 10px;
-}
-/*検索ボタンマウスオーバー時*/
-#sbtn1:hover{
-    color: #666;/*検索ボタンマウスオーバー時のフォントカラー*/ 
+    width: 2.5em;
+    height: 2.5em;
+    right: 0;
+    top: -10px;
+    outline : none;
 }
 
 
@@ -171,16 +176,12 @@ header{
 --------------------------------------------------------------*/
 .scroll-head {
     background: #fff;
-    padding: 10px 0;
+    padding: 10px 200px;
     position: fixed;
     z-index: 1000;
-    width: 100%;
     top: 0;
     display: none;
     box-shadow: lightgray 1px 1px 5px;
-}
-.scroll-head nav{
-    margin: 0 20%;
 }
 .scroll-head ul{
     float: right;
@@ -212,7 +213,7 @@ header{
 /* スライダー */
 .slider img{
     width: 100%;
-    height: 34vw;
+    height: 36vw;
     object-fit: cover;
 }
 /* トップボタン */
@@ -261,7 +262,7 @@ main{
     background-color: #fff;
     font-size: max(1vw,18px);
     font-weight: bold;
-    width: 20%;
+    width: 24%;
     margin: auto;
     border: solid 2px #000;
 }
@@ -444,139 +445,105 @@ footer{
 
 
 
-@media screen and (max-width: 959px){
-    /*----------ヘッダー----------*/
-    header{
-        padding: 5% 3%;
+@media screen and (max-width: 1024px){
+    /*-------------共通-----------*/
+    .item-more{
+      width: 28%;
     }
-    #form{
+    /*--------スクロールヘッダー---------*/
+    .scroll-head{
+        padding: 10px 100px;
+    }
+
+    /*----------ヘッダー----------*/
+    #sh_logo{
+      width: 12%;
+      margin: 1% 44%;
+    }
+    header nav{
+      padding: 0 0 10px 0;
+    }
+    .fa-bars{
         display: none;
     }
-  .sidemenu{
-    display: none;
-  }
-  .sidemenu1{
-    text-align: center;
-  }
-  .sidemenu1 h2{
-    color: #ff002347;
-    margin: 30px 0;
-  }
-  .menu1 li,.menu2 li{
-    margin: 20px 0;
-  }
-  .menu1 a{
-    color: grey;
-    text-decoration: none;
-  }
-  .menu1 a:hover{
-    color: black;
-  }
-  .menu2 a {
-    color: black;
-  }
-  .mainmenu{
-    width: 100%;
-    margin: 0 auto;
-  }
-  #logo1{
-    width: 30%;
-    margin: 0 35%;
-  }
-  .info{
+
+    /*---------スライダー----------*/
+    .slider img{
+      height: 38vh;
+    }
+
+    /*-------インフォメーション---------*/
+    .info{
+      width: 80%;
+      margin: auto;
+    }
+    #info{
+        padding: 30px 80px 0px 80px;
+    }
+    #info-more{
+      margin: 30px 0 30px 450px;
+    }
+
+    /*-------------メイン--------------*/
+    .item-list {
+      width: 90%;
+      margin: auto;
+    }
+    #insta-list {
     width: 80%;
-  }
-  .info td,.info th{
-    vertical-align: top;
-    padding: 10px;
-    text-align: initial;
-  }
-  .info tr{
-    line-height: initial;
-  }
-  .content2 li,.content4 li{
-    width: 50%;
-    margin: auto;
-  }
-  #more{
-    margin: 0 42%;
-  }
-  footer{
-    width: 100%;
-    margin-left: auto;
-  }
-  .icon{
-    margin-left: 78%;
-  }
-  .icon a{
-    color: grey;
-    padding: 0 10px;
-    font-size: 4vw;
-  }
+    }
 }
 
+@media screen and (max-width: 599px){
+    body{
+        font-size: 16px;
+    }
 
-@media screen and (max-width: 559px){
-  .sidemenu{
-    display: none;
-  }
-  .sidemenu1{
-    text-align: center;
-  }
-  .sidemenu1 h2{
-    background-color: white;
-    color: #ff002347;
-    margin: 30px 0;
-  }
-  .menu1 li,.menu2 li{
-    margin: 20px 0;
-  }
-  .menu1 a{
-    color: grey;
-    text-decoration: none;
-  }
-  .menu1 a:hover{
-    color: black;
-  }
-  .menu2 a {
-    color: black;
-  }
-  .mainmenu{
-    width: 100%;
-    margin: auto;
-  }
-  #logo1{
-    width: 40%;
-    margin: 0 30%;
-  }
- .info tr{
-  line-height: 30px;
- }
- .info td,.info th{
-  padding: 5px;
-}
-.content3 img{
-  width: 70%;
-  margin: 10% 15%;
-}
-#more {
-  margin: 0 38%;
-}
-.content4 li{
-  width: 60%;
-  margin: 20px auto;
-  float: initial;
-}
-footer{
-  margin: 50px 0;
-}
-.footer1 ul{
-  width: 80%;
-}
-#no6{
-  display: none;
-}
-.accbox label{
-  width: 24%;
+    header{
+      position: relative;
+    }
+    #nav-text,.search_container{
+      display: none;
+    }
+    #h-nav{
+        padding-top: 5px;
+    }
+    .fa-bars{
+        display: block;
+        float: left;
+        font-size: 30px;
+        padding: 15px 0 20px 0;
+    }
+    #sh_logo{
+      width: 30%;
+      position: absolute;
+      top: 100%;
+      left: -8%;
+    }
+    header li{
+      margin: 0 5px;
+    }
+    #nav-icon{
+      margin-top: 10px;
+    }
+    #nav-icon i{
+      font-size: 20px;
+      padding: 10px 0;
+    }
+
+    .slider img{
+      height: 60vh;
+    }
+
+    #info {
+    padding: 30px 20px 0px 20px;
+    }
+    #info dt{
+      font-size: 14px;
+    }
+    #info dd {
+    margin: 0 20px;
+    font-size: 14px;
+    text-align: left;
 }
 }
