@@ -176,15 +176,19 @@ header li{
 --------------------------------------------------------------*/
 .scroll-head {
     background: #fff;
-    padding: 10px 200px;
+    width: 100%;
     position: fixed;
     z-index: 1000;
     top: 0;
     display: none;
     box-shadow: lightgray 1px 1px 5px;
 }
+.scroll-head nav{
+    padding: 10px 100px;
+}
 .scroll-head ul{
     float: right;
+    padding: 17px 100px 17px 0;
 }
 .scroll-head li{
     display: inline-block;
@@ -192,8 +196,9 @@ header li{
     font-size: max(1vw,18px);
 }
 .scroll-head img{
-    width: 10%;
+    width: 8%;
     float: left;
+    padding: 10px 0 10px 100px;
 }
 .scroll-head i{
     font-size: max(1vw,18px);
@@ -404,6 +409,7 @@ main{
 }
 
 
+
 /*-----------------------フッターエリア-------------------------
 --------------------------------------------------------------*/
 footer{
@@ -451,8 +457,8 @@ footer{
       width: 28%;
     }
     /*--------スクロールヘッダー---------*/
-    .scroll-head{
-        padding: 10px 100px;
+    .scroll-head img{
+        padding: 18px 0 18px 100px;
     }
 
     /*----------ヘッダー----------*/
@@ -470,6 +476,8 @@ footer{
     /*---------スライダー----------*/
     .slider img{
       height: 38vh;
+      margin: 0 auto;
+      padding-top: 100px;
     }
 
     /*-------インフォメーション---------*/
@@ -495,18 +503,29 @@ footer{
 }
 
 @media screen and (max-width: 599px){
-    body{
-        font-size: 16px;
+    .scroll-head{
+        display: none !important;
+    }
+    .SP-hide{
+        display: none !important;
+    }
+    #topbtn{
+        right: 30px;
     }
 
+    /*--------ヘッダー--------*/
     header{
-      position: relative;
+        position: fixed;
+        top: 0;
+        z-index: 8000;
+        background-color: white;
+        width: 100%;
     }
     #nav-text,.search_container{
-      display: none;
+      display: none !important;
     }
     #h-nav{
-        padding-top: 5px;
+        height: 60px;
     }
     .fa-bars{
         display: block;
@@ -515,16 +534,19 @@ footer{
         padding: 15px 0 20px 0;
     }
     #sh_logo{
-      width: 30%;
-      position: absolute;
-      top: 100%;
-      left: -8%;
+        width: 30%;
+        position: absolute;
+        left: -38px;
+        top: 36px;
     }
     header li{
       margin: 0 5px;
     }
     #nav-icon{
-      margin-top: 10px;
+      margin: 0;
+      position: absolute;
+        top: 42px;
+        right: 20px;
     }
     #nav-icon i{
       font-size: 20px;
@@ -532,18 +554,155 @@ footer{
     }
 
     .slider img{
-      height: 60vh;
+      height: 78vh;
     }
 
+    /*--------インフォメーショ--------*/
     #info {
-    padding: 30px 20px 0px 20px;
+        padding: 10px 20px 20px 20px;
     }
     #info dt{
-      font-size: 14px;
+        font-size: 14px;
+        text-align: left;
+        margin: 0 20px;
     }
     #info dd {
-    margin: 0 20px;
-    font-size: 14px;
-    text-align: left;
-}
+        margin: 0 20px;
+        font-size: 14px;
+        text-align: left;
+    }
+    #info dl {
+        display: block;
+    }
+    #info-more{
+        margin: 30px 40px 10px 40px;
+    }
+    #info-more p{
+        font-size: max(1vw,16px);
+        display: inline-block;
+    }
+
+    /*--------メイン----------*/
+    .item-list li {
+    display: inline-block;
+    width: 42%;
+    margin: 0 5px 20px 5px;
+    }
+    .item-list h2,.item-list p,.headtxt p{
+        font-size: max(1vw,16px);
+    }
+    .item-more {
+        width: 70%;
+        font-size: max(1vw,16px);
+    }
+    #pick-list li {
+        width: 80%;
+    }
+
+    /*--------instagram---------*/
+    .insta p{
+        font-size: max(1vw,16px);
+        width: 80%;
+        margin: auto;
+    }
+    .SP-show{
+        display: block;
+    }
+    #insta-list {
+        margin: 20px auto;
+    }
+    #insta-list img{
+        width: 42%;
+        margin: 0;
+    }
+
+    /*-------フッター-------*/
+    #nav-area1{
+        margin: 0 0 20px 40px;
+    }
+    #nav-area1 img {
+        width: 80%;
+    }
+    #nav-area2, #nav-area3 {
+        width: 80%;
+        margin: 10px 40px;
+    }
+    .footer1 p{
+        font-size: max(1vw,14px);
+    }
+
+    /*--------ハンバーガーメニュー--------*/
+    .nav_toggle {
+        display: block;
+        position: relative;
+        width: 1.75rem;
+        height: 1.5rem;
+        z-index: 6000;
+        margin: 24px 0 0 20px;
+    }
+    .nav_toggle i {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #333;
+        position: absolute;
+        transition: transform .5s, opacity .5s;/*ボタンクリック時のアニメーションの速度*/
+    }
+    .nav_toggle i:nth-child(1) {
+        top: 0;
+    }
+    .nav_toggle i:nth-child(2) {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .nav_toggle i:nth-child(3) {
+        bottom: 0;
+    }
+    /*ボタンがクリックされて、.show が要素に付与*/
+    .nav_toggle.show i:nth-child(1) {
+        transform: translateY(10px) rotate(-45deg);
+    }
+    .nav_toggle.show i:nth-child(2) {
+        opacity: 0;
+    }
+    .nav_toggle.show i:nth-child(3) {
+        transform: translateY(-12px) rotate(45deg);
+    }
+    /*クリック前のリスト*/
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 100px 50px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .5s, visibility .5s;/*変化させるプロパティと変化にかかる時間を定義*/
+        background-color: #fff;
+        z-index: 5000;
+        display: block;
+    }
+    /*クリック後　.showが追加される*/
+    .nav.show {
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav.show i{
+        font-size: max(2vw,24px);
+        margin: 30px 5px;
+    }
+    .nav_menu_li{
+        font-size: max(1vw,18px);
+        font-weight: bold;
+        clear: both;
+        width: 100%;
+         margin: 10px;
+    }
+    .nav_menu_ul{
+        margin-bottom: 10px;
+    }
+
+
 }

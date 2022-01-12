@@ -38,7 +38,6 @@
         <a href="#">新規会員登録で10%OFFクーポン配布中!</a>
       </div>
       <div id="h-nav">
-        <i class="fas fa-bars"></i>
         <a href="#"><img src="coco.img/1x/shellylogo.png" id="sh_logo" alt="ブランドロゴ"></a>
         <nav>
           <div id="nav-text">
@@ -61,6 +60,30 @@
             </ul>
           </div>
         </nav>
+        <!------------ ハンバーガーメニュー ------------->
+        <span class="nav_toggle">
+          <i></i><!--ハンバーガーメニューの線-->
+          <i></i>
+          <i></i>
+        </span>
+        <!--メニューリスト-->
+        <nav class="nav">
+          <ul class="nav_menu_ul">
+            <li class="nav_menu_li"><a href="#">TOP</a></li>
+            <li class="nav_menu_li"><a href="#">新作アイテム</a></li>
+            <li class="nav_menu_li"><a href="#">人気アイテム</a></li>
+            <li class="nav_menu_li"><a href="#">特集・シリーズ</a></li>
+            <li class="nav_menu_li"><a href="#">カテゴリ</a></li>
+          </ul>
+          <ul class="nav_menu_ul">
+            <li><a href="#"><i class="fas fa-shopping-cart"></i></i></li>
+            <li><a href="#"><i class="fas fa-heart"></i></a></li>
+            <li><a href="#"><i class="fas fa-user-circle"></i></a></li>
+          </ul>
+          <ul class="nav_menu_ul">
+            <li class="nav_menu_li"><a href="#">ログイン/会員登録</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
       <!-- トップ -->
@@ -80,13 +103,13 @@
             </ul>
           </nav>
         </div>
-        <section>
-          <div class="slider">
-		        <img src="coco.img/slide1.jpg" alt="スライド画像1" class="top">
-            <img src="coco.img/slide2.jpg" alt="スライド画像2" class="top">
-            <img src="coco.img/slide3.jpg" alt="スライド画像3" class="top">
-          </div>
-        </section>
+        <div class="slider-hide">
+          <ul class="slider">
+		        <li><img src="coco.img/slide1.jpg" alt="スライド画像1" class="top"></li>
+            <li><img src="coco.img/slide2.jpg" alt="スライド画像2" class="top"></li>
+            <li><img src="coco.img/slide3.jpg" alt="スライド画像3" class="top"></li>
+          </ul>
+        </div>
         <!-- お知らせ -->
         <section class="info">
           <div class="headtxt">
@@ -102,7 +125,7 @@
                 <dt>2020.07.01</dt>
                 <dd>【お詫び】台風による配送遅延のお知らせ</dd>
               </dl></a>
-              <a href="#"><dl>
+              <a href="#" class="SP-hide"><dl>
                 <dt>2020.05.01</dt>
                 <dd>【営業について】ゴールデンウィーク期間中の営業案内</dd>
               </dl></a>
@@ -174,8 +197,8 @@
                       </div>
                     </div>
                   </li>
-                  <li><a href="#"><img src="coco.img/new-item1.jpg" alt="新作アイテム画像"></a>
-                    <div>
+                  <li><a href="#"><img src="coco.img/new-item1.jpg" alt="新作アイテム画像" class="SP-hide"></a>
+                    <div class="SP-hide">
                       <a href="#"><h2>シフォンブラウス<h2></a>
                       <p>¥1,980</p>
                       <div class="favbtn">
@@ -183,8 +206,8 @@
                       </div>
                     </div>
                   </li>
-                  <li><a href="#"><img src="coco.img/new-item1.jpg" alt="新作アイテム画像"></a>
-                    <div>
+                  <li><a href="#"><img src="coco.img/new-item1.jpg" alt="新作アイテム画像" class="SP-hide"></a>
+                    <div class="SP-hide">
                       <a href="#"><h2>シフォンブラウス<h2></a>
                       <p>¥1,980</p>
                       <div class="favbtn">
@@ -274,10 +297,10 @@
                     </div>
                   </div>
               </li>
-              <li class="r-box">
-                <p class="ranking_no">7</p>
-                  <a href="#"><img src="coco.img/rank-item.jpg" alt="人気アイテム画像"></a>
-                  <div>
+              <li class="r-box SP-hide">
+                <p class="ranking_no SP-hide">7</p>
+                  <a href="#"><img src="coco.img/rank-item.jpg" alt="人気アイテム画像" class="SP-hide"></a>
+                  <div class="SP-hide">
                     <a href="#"><h2>トレンチコート</h2></a>
                     <p>¥3,980</p>
                     <div class="favbtn">
@@ -286,9 +309,9 @@
                   </div>
               </li>
               <li class="r-box">
-                <p class="ranking_no">8</p>
-                  <a href="#"><img src="coco.img/rank-item.jpg" alt="人気アイテム画像"></a>
-                  <div>
+                <p class="ranking_no SP-hide">8</p>
+                  <a href="#"><img src="coco.img/rank-item.jpg" alt="人気アイテム画像" class="SP-hide"></a>
+                  <div class="SP-hide">
                     <a href="#"><h2>トレンチコート</h2></a>
                     <p>¥3,980</p>
                     <div class="favbtn">
@@ -324,14 +347,14 @@
                   <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                 </div>
               </li>
-              <li><a href="#"><img src="coco.img/sh-banner1.png" alt="ピックアップ画像"></a>
-                <div>
+              <li class="SP-hide"><a href="#"><img src="coco.img/sh-banner1.png" alt="ピックアップ画像" class="SP-hide"></a>
+                <div class="SP-hide">
                   <a href="#"><h2>春の新作アイテム特集<h2></a>
                   <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                 </div>
               </li>
-              <li><a href="#"><img src="coco.img/sh-banner2.png" alt="ピックアップ画像"></a>
-                <div>
+              <li><a href="#"><img src="coco.img/sh-banner2.png" alt="ピックアップ画像" class="SP-hide"></a>
+                <div class="SP-hide">
                   <a href="#"><h2>春の新作アイテム特集<h2></a>
                   <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                 </div>
@@ -355,7 +378,7 @@
             <a href="#"><img src="coco.img/insta1.jpg" alt="インスタグラム投稿画像"></a>
             <a href="#"><img src="coco.img/insta1.jpg" alt="インスタグラム投稿画像"></a>
             <a href="#"><img src="coco.img/insta1.jpg" alt="インスタグラム投稿画像"></a>
-            <a href="#"><img src="coco.img/insta1.jpg" alt="インスタグラム投稿画像"></a>
+            <a href="#"><img src="coco.img/insta1.jpg" alt="インスタグラム投稿画像" class="SP-hide"></a>
           </div>
           <div class="item-more">
             <a href="#">Instagramをフォロー　
@@ -414,6 +437,11 @@
         $('body, html').animate({ scrollTop: 0 }, 500);
           return false;
         });
+        });
+
+        //ハンバーガーメニュー
+        $('.nav_toggle').on('click', function () {//.nav_toggle（ボタン）をクリックすると
+        $('.nav_toggle, .nav').toggleClass('show');//.nav_toggle（ボタン）と.nav（メニューリスト）に、showというクラスを付与する
         });
 
         //スクロールヘッダー
